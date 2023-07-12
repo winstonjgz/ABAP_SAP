@@ -9,6 +9,17 @@ sap.ui.define([
 
         return Controller.extend("logaligroup.invoices.controller.ViewMain", {
             onInit: function () {
+                const oJSONModel = new sap.ui.model.json.JSONModel();
+                const oView = this.getView();
+                oJSONModel.loadData("../model/selectionScreenMenu.json");
+                oView.setModel(oJSONModel, "selectionScreen");
+            },
+            onFilter: function (oEvent){
+
+            },
+            onClearFilter: function (oEvent){
+                const oModelselectionScreen = this.getView().getModel("selectionScreen");
+                oModelselectionScreen.setProperty("/CountryKey", "");
 
             }
         });
