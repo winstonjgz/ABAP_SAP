@@ -4,7 +4,7 @@
     <Page id="page" title="{i18n>title}">
             <Panel id="pnlSelScreen" headerText="{i18n>selectionScreen}" >
                 <Label id="lblShipName" labelFor="shipName" text="{i18n>shipName}" class="sapUiSmallMarginEnd"></Label>
-                <Input id="shipName" width="200px" class="sapUismallMarginEnd"></Input>
+                <Input id="shipName" value="{selectionScreen>/ShipName}" width="200px" class="sapUismallMarginEnd"></Input>
                 <Label id="lblCountry" text="{i18n>country}" class="sapUiSmallMargin"></Label>
                 <Select id="slCountry" selectedKey="{selectionScreen>/CountryKey}" forceSelection="false" items="{selectionScreen>/Countries}">
                     <items>
@@ -14,16 +14,16 @@
                 </Select>
 
                 <Button id="btnFilter" 
-                text="{i18n>btnFilter}" 
-                icon="sap-icon://filter" 
-                press="onFilter" 
-                class="sapUiSmallMarginEnd" >
+                    text="{i18n>btnFilter}" 
+                    icon="sap-icon://filter" 
+                    press="onFilter" 
+                    class="sapUiSmallMarginEnd" >
                 </Button>
                 <Button id="btnClearFilter" 
-                text="{i18n>btnClearFilter}" 
-                icon="sap-icon://clear-filter" 
-                press="onClearFilter" 
-                class="sapUiSmallMarginEnd" >
+                    text="{i18n>btnClearFilter}" 
+                    icon="sap-icon://clear-filter" 
+                    press="onClearFilter" 
+                    class="sapUiSmallMarginEnd" >
                 </Button>
             </Panel>      
             
